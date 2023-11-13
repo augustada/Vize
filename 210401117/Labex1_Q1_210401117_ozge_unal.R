@@ -1,6 +1,6 @@
 maps<-data.frame(foo=c(10,9))
 maps<- read.csv("MapsThatChangedOurWorld_StoryMap_Data.csv",sep=";")
-maps
+colnames(maps) <- names(maps[1,])
 maps$Latitude <- gsub('N', '', maps$Latitude)
 maps$Latitude <- as.numeric(maps$Latitude)
 print(maps)
